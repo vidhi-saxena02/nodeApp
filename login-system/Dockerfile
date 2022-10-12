@@ -5,7 +5,7 @@ ENV MONGO_DB_USERNAME=admin \
 
 RUN mkdir -p /home/login-system
 
-COPY ./login-system /home/login-system
+COPY . /home/login-system
 
 # set default dir so that next commands executes in /home/app dir
 WORKDIR /home/login-system
