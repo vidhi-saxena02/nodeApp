@@ -18,9 +18,7 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 app.use("/", express.static(path.join(__dirname, "site")));
 
-app.get("/users", (req, res) => {
-	res.send(getAllUsers());
-});
+app.get("/users", getAllUsers);
 
 app.post("/users", postUser);
 app.get("/", (req, res) => {
